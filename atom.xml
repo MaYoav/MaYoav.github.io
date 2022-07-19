@@ -92,31 +92,6 @@
   </entry>
   
   <entry>
-    <title>Videos</title>
-    <link href="http://mayoav.github.io/2013/12/25/videos/"/>
-    <id>http://mayoav.github.io/2013/12/25/videos/</id>
-    <published>2013-12-24T16:19:15.000Z</published>
-    <updated>2022-06-08T09:10:23.434Z</updated>
-    
-    <content type="html"><![CDATA[<p>This is a video test post.</p><p><strong>Youtube</strong></p><p></p><div class="video-container"><iframe src="https://www.youtube.com/embed/TIbZDRXM-Tg" frameborder="0" loading="lazy" allowfullscreen=""></iframe></div><p></p><p><strong>Vimeo</strong></p><p></p><div class="video-container"><iframe src="https://player.vimeo.com/video/82090131" frameborder="0" loading="lazy" allowfullscreen=""></iframe></div><p></p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;This is a video test post.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Youtube&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;video-container&quot;&gt;&lt;iframe</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>Tag Plugins</title>
     <link href="http://mayoav.github.io/2013/12/25/tag-plugins/"/>
     <id>http://mayoav.github.io/2013/12/25/tag-plugins/</id>
