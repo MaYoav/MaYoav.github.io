@@ -1,20 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>测试文章1</title>
-    <url>/2022/05/11/Server/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A01/</url>
-    <content><![CDATA[<h3 id="修改-nginxconf-文件"><a class="anchor" href="#修改-nginxconf-文件">#</a> 修改 nginx.conf 文件</h3>
-<figure class="highlight nginx"><figcaption data-lang="nginx"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token comment"># 负载均衡服务器组</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token directive"><span class="token keyword">upstream</span> mytomcat</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="3"></td><td><pre>		<span class="token comment"># 代理动态请求的机制：ip_hash (ip hash), RR (轮询), weight (权重)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>		<span class="token comment">#188.39.200.1000  RR</span></pre></td></tr><tr><td data-num="5"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> localhost:8080 	weight=5</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> localhost:8081 	weight=6</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  	<span class="token comment"># 默认是轮询</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token directive"><span class="token keyword">server</span> 192.168.1.7:8080</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> 192.168.1.7:8081</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="14"></td><td><pre>  	<span class="token directive"><span class="token keyword">location</span> /cdstore</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="15"></td><td><pre>         <span class="token comment">#反向代理配置，将所有对动态资源的请求都代理给 tomcat 处理</span></pre></td></tr><tr><td data-num="16"></td><td><pre>          <span class="token directive"><span class="token keyword">proxy_pass</span> http://mytomcat</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>     <span class="token punctuation">}</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure>]]></content>
+    <title>用Hexo框架4步完成个人博客搭建</title>
+    <url>/post/1c5b871c.html</url>
+    <content><![CDATA[<h1 id="1-环境搭建"><a class="anchor" href="#1-环境搭建">#</a> 1. 环境搭建</h1>
+<h2 id="11安装-nodejs"><a class="anchor" href="#11安装-nodejs">#</a> 1.1 安装 nodejs</h2>
+<blockquote>
+<p>下载地址（选择稳定版）：<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">https://nodejs.org/zh-cn/</span></p>
+<blockquote>
+<p>下载后直接默认安装即可</p>
+</blockquote>
+<p>测试 nodejs 安装是否成功：命令 —— node-v ——</p>
+<blockquote>
+<p>win+R 打开 Windows 自带命令行工具窗口，输入以上命令回车后出现版本号表示安装成功</p>
+</blockquote>
+<p>测试 npm 是否安装成功：命令 —— npm-v ——</p>
+<blockquote>
+<p>Ps : npm 包管理工具是在安装 nodejs 时默认安装的，不需要自己安装</p>
+</blockquote>
+<blockquote>
+<p>同上所述，在命令行输入以上命令回车，出现版本号表示安装成功</p>
+<p>Hexo 框架需要通过 npm 管理工具进行安装</p>
+</blockquote>
+</blockquote>
+<h2 id="12安装-hexo-框架"><a class="anchor" href="#12安装-hexo-框架">#</a> 1.2 安装 Hexo 框架</h2>
+<blockquote>
+<p>1. 打开命令行工具输入 —— npm install -g hexo-cli ——（-g 表示全局安装 hexo-cli 脚手架）</p>
+<p>2. 验证是否安装成功 —— hexo -v ——（出现版本号表示安装成功）</p>
+</blockquote>
+<h2 id="13安装-git"><a class="anchor" href="#13安装-git">#</a> 1.3 安装 Git</h2>
+<blockquote>
+<p>1. 下载地址：<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS8lRUYlQkMlODglRTYlODklQkUlRTUlODglQjAlRTglODclQUElRTUlQjclQjElRTclOTQlQjUlRTglODQlOTElRTclQjMlQkIlRTclQkIlOUYlRTUlQUYlQjklRTUlQkElOTQlRTclOUElODQlRTclODklODglRTYlOUMlQUMlRTglQkYlOUIlRTglQTElOEMlRTUlQUUlODklRTglQTMlODUlRUYlQkMlODk=">https://git-scm.com/（找到自己电脑系统对应的版本进行安装）</span></p>
+<p>2. 验证是否安装成功 —— git - version ——</p>
+</blockquote>
+<h1 id="2使用-hexo-开始搭建博客"><a class="anchor" href="#2使用-hexo-开始搭建博客">#</a> 2. 使用 Hexo 开始搭建博客</h1>
+<h2 id="21创建并进入项目文件夹xxx并在该目录下打开命令行工具"><a class="anchor" href="#21创建并进入项目文件夹xxx并在该目录下打开命令行工具">#</a> 2.1 创建并进入项目文件夹（XXX）并在该目录下打开命令行工具</h2>
+<blockquote>
+<p>以 Windows 为例，在当前目录下鼠标点击顶部文件夹目录栏（此电脑 &gt; D 盘：&gt; 我的文件夹：&gt;XXX）输入 cmd 回车打开命令行。Ps：切记一定是当前目录下</p>
+</blockquote>
+<h2 id="22通过hexo命令初始化博客"><a class="anchor" href="#22通过hexo命令初始化博客">#</a> 2.2 通过 hexo 命令初始化博客</h2>
+<blockquote>
+<p>命令：—— hexo init ——</p>
+<blockquote>
+<p>提示：start blogging with Hexo！即完成初始化</p>
+<p>此时该文件夹下就生成了项目文件</p>
+</blockquote>
+</blockquote>
+<h2 id="23运行hexo服务预览博客"><a class="anchor" href="#23运行hexo服务预览博客">#</a> 2.3 运行 hexo 服务预览博客</h2>
+<blockquote>
+<p>命令：—— hexo s ——（出现一个访问地址、点击即可预览）</p>
+<p>按住 ctrl+c 即可结束该服务</p>
+</blockquote>
+<h2 id="24创建文章"><a class="anchor" href="#24创建文章">#</a> 2.4 创建文章</h2>
+<blockquote>
+<p>命令：—— hexo n "文章标题" ——</p>
+<blockquote>
+<p>回车后出现以标题命名的 .md 文件路径</p>
+<p>打开该文件使用 md 语法编辑内容（md——markdown）</p>
+</blockquote>
+</blockquote>
+<h2 id="更新文章"><a class="anchor" href="#更新文章">#</a> 更新文章</h2>
+<p>创建文章后在项目文件夹下打开命令行工具输入：</p>
+<blockquote>
+<ol>
+<li>hexo clean 清理缓存</li>
+<li>hexo g 解析生成</li>
+<li>hexo s 运行 hexo 服务预览博客</li>
+</ol>
+</blockquote>
+<h1 id="3将博客部署到-github"><a class="anchor" href="#3将博客部署到-github">#</a> 3. 将博客部署到 Github</h1>
+<h2 id="登录-github-创建仓库"><a class="anchor" href="#登录-github-创建仓库">#</a> 登录  Github  创建仓库</h2>
+<p>仓库名：Github 中的 <span class="exturl" data-url="aHR0cDovL3VzZXJuYW1lLmdpdGh1Yi5pbw==">username.github.io</span></p>
+<h2 id="32在本地项目中安装git部署插件"><a class="anchor" href="#32在本地项目中安装git部署插件">#</a> 3.2 在本地项目中安装 git 部署插件</h2>
+<blockquote>
+<p>项目文件根目录下打开命令行工具输入如下：</p>
+<blockquote>
+<p>npm.install --save hexo -deployer-git（--save 表示仅在本项目中安装）</p>
+</blockquote>
+</blockquote>
+<h2 id="修改项目根目录下的配置文件_configyml"><a class="anchor" href="#修改项目根目录下的配置文件_configyml">#</a> 修改项目根目录下的配置文件_config.yml</h2>
+<h3 id="331找到最下边的-deploy-type进行如下编辑"><a class="anchor" href="#331找到最下边的-deploy-type进行如下编辑">#</a> 3.3.1 找到最下边的 deploy： type：进行如下编辑：</h3>
+<ol>
+<li>type:git</li>
+<li>repo:github 上创建的仓库地址</li>
+<li>branch（分支）：master</li>
+</ol>
+<h2 id="部署到-github"><a class="anchor" href="#部署到-github">#</a> 部署到  GitHub</h2>
+<blockquote>
+<p>项目根目录下打开命令行工具输入如下：</p>
+<blockquote>
+<p>hexo d</p>
+<p>提示你输入 github 的账号密码后代码提交到 GitHub 仓库</p>
+<p>通过 github 的链接即可访问我们的博客了</p>
+</blockquote>
+</blockquote>
+<h1 id="4更换-hexo-博客默认主题"><a class="anchor" href="#4更换-hexo-博客默认主题">#</a> 4. 更换 Hexo 博客默认主题</h1>
+<h2 id="将主题文件下载到本地项目的-themes-文件夹下"><a class="anchor" href="#将主题文件下载到本地项目的-themes-文件夹下">#</a> 将主题文件下载到本地项目的  themes  文件夹下</h2>
+<p>从 GitHub 上克隆下载主题 themes/yilia 文件夹</p>
+<blockquote>
+<p>在 github 中搜索 hexo-theme</p>
+<p>结果的右上角 Sort：Most stars 排序方式（相当于收藏数量最高，也就是最受欢迎的主题）</p>
+</blockquote>
+<h2 id="42下载主题在本地项目根目录下打开命令行工具"><a class="anchor" href="#42下载主题在本地项目根目录下打开命令行工具">#</a> 4.2 下载主题（在本地项目根目录下打开命令行工具）</h2>
+<p>进入命令行工具后输入以下命令：</p>
+<blockquote>
+<p>git clone + 你复制的需要下载的主题的下载地址 themes/xxx（themes/xxx 意思就是储存到 themes 目录下并命名为 xxx）</p>
+</blockquote>
+<h2 id="修改配置文件_configyml"><a class="anchor" href="#修改配置文件_configyml">#</a> 修改配置文件_config.yml</h2>
+<p>找到：# Extonsions 项下 的 themes：将后面的值换成下载到 themes 文件夹下的主题文件夹名称（xxx）并保存</p>
+<h2 id="44更新并重新部署"><a class="anchor" href="#44更新并重新部署">#</a> 4.4 更新并重新部署</h2>
+<ol>
+<li>hexo clean ：清理缓存</li>
+<li>hexo g ：解析生成</li>
+<li>hexo s ：运行 hexo 服务预览博客</li>
+<li>hexo d ：部署到 github 通过 github 的链接即可访问我们的博客了</li>
+</ol>
+<h2 id="好看的hexo主题推荐"><a class="anchor" href="#好看的hexo主题推荐">#</a> 好看的 hexo 主题推荐</h2>
+<ol>
+<li>
+<p>argvchs</p>
+</li>
+<li>
+<p>kyori</p>
+</li>
+<li>
+<p>v-vincen</p>
+</li>
+<li>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token function">git</span> config --global --unset http.proxy </pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">git</span> config --global --unset https.proxy</pre></td></tr></tbody></table></figure></li>
+</ol>
+]]></content>
       <categories>
-        <category>Server</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Nginx</tag>
+        <tag>Hexo</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云服务器Ubuntu系统如何配置</title>
+    <url>/post/cb268854.html</url>
+    <content><![CDATA[<h1 id="1-通过ssh连接云服务器失败报错permission-denied-please-try-again"><a class="anchor" href="#1-通过ssh连接云服务器失败报错permission-denied-please-try-again">#</a> 1. 通过 ssh 连接云服务器失败报错 <code>Permission denied, please try again.</code></h1>
+<h2 id="解决办法"><a class="anchor" href="#解决办法">#</a> 解决办法：</h2>
+<ol>
+<li><code>sudo passwd root</code>  第一步</li>
+<li>修改密码 enter 两次</li>
+<li>sudo vi /etc/ssh/sshd_config</li>
+<li>找到 PermitRootLogin 这项改为 yes</li>
+<li>保存并退出</li>
+<li>重启 ssh 服务 sudo service ssh restart</li>
+</ol>
+<h1 id="2-在ubuntu2004中安装mysql"><a class="anchor" href="#2-在ubuntu2004中安装mysql">#</a> 2. 在 ubuntu20.04 中安装 mysql</h1>
+<h2 id="1-安装更新的软件包"><a class="anchor" href="#1-安装更新的软件包">#</a> 1. 安装更新的软件包</h2>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt-get</span> upgrade</pre></td></tr></tbody></table></figure><p>&lt;img src="C:\Users\14875\AppData\Roaming\Typora\typora-user-images\image-20220714004138664.png" alt="image-20220714004138664" style="zoom:50%;" /&gt;</p>
+<h2 id="2-安装mysql"><a class="anchor" href="#2-安装mysql">#</a> 2. 安装 mysql</h2>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> mysql-server mysql-client  <span class="token comment"># 安装 mysql 服务器和客服机</span></pre></td></tr></tbody></table></figure><p><img data-src="C:%5CUsers%5C14875%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220714004818554.png" alt="image-20220714004818554"></p>
+]]></content>
+      <categories>
+        <category>Cloud-Server</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2021/12/14/Hexo/hello-world/</url>
+    <url>/post/4a17b156.html</url>
     <content><![CDATA[<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo</span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation</span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting</span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub</span>.</p>
 <h2 id="quick-start"><a class="anchor" href="#quick-start">#</a> Quick Start</h2>
 <h3 id="create-a-new-post"><a class="anchor" href="#create-a-new-post">#</a> Create a new post</h3>
@@ -29,5 +181,17 @@
       <categories>
         <category>Hexo</category>
       </categories>
+  </entry>
+  <entry>
+    <title>测试文章1</title>
+    <url>/post/8183d36.html</url>
+    <content><![CDATA[<h3 id="修改-nginxconf-文件"><a class="anchor" href="#修改-nginxconf-文件">#</a> 修改 nginx.conf 文件</h3>
+<figure class="highlight nginx"><figcaption data-lang="nginx"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token comment"># 负载均衡服务器组</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token directive"><span class="token keyword">upstream</span> mytomcat</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="3"></td><td><pre>		<span class="token comment"># 代理动态请求的机制：ip_hash (ip hash), RR (轮询), weight (权重)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>		<span class="token comment">#188.39.200.1000  RR</span></pre></td></tr><tr><td data-num="5"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> localhost:8080 	weight=5</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> localhost:8081 	weight=6</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  	<span class="token comment"># 默认是轮询</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token directive"><span class="token keyword">server</span> 192.168.1.7:8080</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> 192.168.1.7:8081</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="14"></td><td><pre>  	<span class="token directive"><span class="token keyword">location</span> /cdstore</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="15"></td><td><pre>         <span class="token comment">#反向代理配置，将所有对动态资源的请求都代理给 tomcat 处理</span></pre></td></tr><tr><td data-num="16"></td><td><pre>          <span class="token directive"><span class="token keyword">proxy_pass</span> http://mytomcat</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>     <span class="token punctuation">}</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
   </entry>
 </search>
