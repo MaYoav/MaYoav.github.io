@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>在Windowns上如何使用Linux系统</title>
-    <url>/posts/undefined.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Win10开始菜单栏美化</title>
     <url>/posts/7cc2.html</url>
     <content><![CDATA[<h1 id="本文只为记录"><a class="anchor" href="#本文只为记录">#</a> 本文只为记录</h1>
@@ -36,6 +31,11 @@
         <tag>Windowns美化</tag>
         <tag>教程</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>在Windowns上如何使用Linux系统</title>
+    <url>/posts/undefined.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>三行代码美化Windows终端</title>
@@ -166,18 +166,6 @@
       </tags>
   </entry>
   <entry>
-    <title>测试文章1</title>
-    <url>/posts/8183d36.html</url>
-    <content><![CDATA[<h3 id="修改-nginxconf-文件"><a class="anchor" href="#修改-nginxconf-文件">#</a> 修改 nginx.conf 文件</h3>
-<figure class="highlight nginx"><figcaption data-lang="nginx"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token comment"># 负载均衡服务器组</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token directive"><span class="token keyword">upstream</span> mytomcat</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="3"></td><td><pre>		<span class="token comment"># 代理动态请求的机制：ip_hash (ip hash), RR (轮询), weight (权重)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>		<span class="token comment">#188.39.200.1000  RR</span></pre></td></tr><tr><td data-num="5"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> localhost:8080 	weight=5</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> localhost:8081 	weight=6</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  	<span class="token comment"># 默认是轮询</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token directive"><span class="token keyword">server</span> 192.168.1.7:8080</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> 192.168.1.7:8081</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="14"></td><td><pre>  	<span class="token directive"><span class="token keyword">location</span> /cdstore</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="15"></td><td><pre>         <span class="token comment">#反向代理配置，将所有对动态资源的请求都代理给 tomcat 处理</span></pre></td></tr><tr><td data-num="16"></td><td><pre>          <span class="token directive"><span class="token keyword">proxy_pass</span> http://mytomcat</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>     <span class="token punctuation">}</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure>]]></content>
-      <categories>
-        <category>Server</category>
-      </categories>
-      <tags>
-        <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>腾讯云服务器Ubuntu系统如何配置</title>
     <url>/posts/cb268854.html</url>
     <content><![CDATA[<h1 id="1-通过ssh连接云服务器失败报错permission-denied-please-try-again"><a class="anchor" href="#1-通过ssh连接云服务器失败报错permission-denied-please-try-again">#</a> 1. 通过 ssh 连接云服务器失败报错 <code>Permission denied, please try again.</code></h1>
@@ -236,6 +224,18 @@
       </tags>
   </entry>
   <entry>
+    <title>测试文章1</title>
+    <url>/posts/8183d36.html</url>
+    <content><![CDATA[<h3 id="修改-nginxconf-文件"><a class="anchor" href="#修改-nginxconf-文件">#</a> 修改 nginx.conf 文件</h3>
+<figure class="highlight nginx"><figcaption data-lang="nginx"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token comment"># 负载均衡服务器组</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token directive"><span class="token keyword">upstream</span> mytomcat</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="3"></td><td><pre>		<span class="token comment"># 代理动态请求的机制：ip_hash (ip hash), RR (轮询), weight (权重)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>		<span class="token comment">#188.39.200.1000  RR</span></pre></td></tr><tr><td data-num="5"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> localhost:8080 	weight=5</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> localhost:8081 	weight=6</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  	<span class="token comment"># 默认是轮询</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token directive"><span class="token keyword">server</span> 192.168.1.7:8080</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>		<span class="token directive"><span class="token keyword">server</span> 192.168.1.7:8081</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="14"></td><td><pre>  	<span class="token directive"><span class="token keyword">location</span> /cdstore</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="15"></td><td><pre>         <span class="token comment">#反向代理配置，将所有对动态资源的请求都代理给 tomcat 处理</span></pre></td></tr><tr><td data-num="16"></td><td><pre>          <span class="token directive"><span class="token keyword">proxy_pass</span> http://mytomcat</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>     <span class="token punctuation">}</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用Hexo框架4步完成个人博客搭建Step.1</title>
     <url>/posts/1c5b871c.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，您输入的密码错误，请检查后重新输入。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -269,6 +269,64 @@
     <url>/posts/1f46.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，您输入的密码错误，请检查后重新输入。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
   <script id="hbeData" type="hbeData" data-hmacdigest="d964a695e6466c93a44f64c55da66b210727842574ecca21d72e4abbafa2e08c">4b38a63431ca6072ce4c12158ee71eedb96691b5ab322453cdce97522082e5e426e6f5a7d929c771a0ad3ff5d64086f134e1489c24e3efd9b4de6249817c02215066bfdf9463d941aab6744338918c4e76482da090ceabe4c9adbfa4b0378d55a4405a8d79379e2e66c1083bbb7df66bcb699de7abdd11dc7d05de2b7f2668914c2d2fad9a9c088139d37596bad5ddc6cd022a16c1b36a0ad0eee0edf5469931314a39fa4f5924e8ec1df47ab09c8375826b7d6cd5d271638ff36d18315b29d918deca042c0ea1e1c1a1fd8d079e2451b78d2e2229ca3d9da4b832caeceabd1154c62b5edbc2360df0c233a9c92cf276</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>个人DIY日记</category>
+        <category>Hexo搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+        <tag>private</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用Hexo框架4步完成个人博客搭建Step.4</title>
+    <url>/posts/dd07.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，您输入的密码错误，请检查后重新输入。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d9b72b322d089e68f36831ef55fd24a1bdb7107b5581e26451dcd3fd900f3982">4b38a63431ca6072ce4c12158ee71eedb96691b5ab322453cdce97522082e5e4512fa0dc33c5be995b6bee9f706dc37741e937599c4f78f8ace50ffc56cc83a9fb9c05efe083d9f563ca1ff4f3dbcab10f97a6c6904765faaaa81327b3d7c2005cac47294f0fb5ab7fafd82e3258cf3c00af8e1d4666e95e857600859e4b53bf066873ca081a5ecfe008a6d793ad83ff0ce4b7bceec0d9dc17d09a0bc0bcb68d</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>个人DIY日记</category>
+        <category>Hexo搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+        <tag>private</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用Hexo框架4步完成个人博客搭建Step.2</title>
+    <url>/posts/df87.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，您输入的密码错误，请检查后重新输入。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="ce1d7802988c89c188a0c64cf85c72aceaf624f2d036a1de9884cdd7cee618a8">4b38a63431ca6072ce4c12158ee71eedb96691b5ab322453cdce97522082e5e4c57bbb1fa77aff6a6a6abd9a9cef73784b8950ecc8d052f28e1d2f63c01c249c5086f0eb63e814e90832ed5946de9a1c30c08975e3c486b1360cf0478f36f591e85580dbdbfb93226729317c649a231fe63eb1c5777acffe7f49850a2b12a7cc7698a310fe52469f3e1d14e6e5f1d41da2e3eed31398e3f69269b087965919c28f76100cf68cac38cdf06c6b254679bec01d1e85886dd251e45278f48fd3724f96a094981cc65d1c291ab6784b14245f4d3e6bd00ac594c098b90443ce76ddb0a0826ac17b7e165e43787b6325d4cf4a88a5d64a2d1f8d3e2b49a68cb75f8713</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-xray">
       <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
@@ -380,64 +438,6 @@ H<sub>2</sub>O<sub>2</sub><br>
       <tags>
         <tag>教程</tag>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用Hexo框架4步完成个人博客搭建Step.2</title>
-    <url>/posts/df87.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，您输入的密码错误，请检查后重新输入。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="ce1d7802988c89c188a0c64cf85c72aceaf624f2d036a1de9884cdd7cee618a8">4b38a63431ca6072ce4c12158ee71eedb96691b5ab322453cdce97522082e5e4c57bbb1fa77aff6a6a6abd9a9cef73784b8950ecc8d052f28e1d2f63c01c249c5086f0eb63e814e90832ed5946de9a1c30c08975e3c486b1360cf0478f36f591e85580dbdbfb93226729317c649a231fe63eb1c5777acffe7f49850a2b12a7cc7698a310fe52469f3e1d14e6e5f1d41da2e3eed31398e3f69269b087965919c28f76100cf68cac38cdf06c6b254679bec01d1e85886dd251e45278f48fd3724f96a094981cc65d1c291ab6784b14245f4d3e6bd00ac594c098b90443ce76ddb0a0826ac17b7e165e43787b6325d4cf4a88a5d64a2d1f8d3e2b49a68cb75f8713</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">当前文章暂不对外可见，请输入密码后查看！</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>个人DIY日记</category>
-        <category>Hexo搭建个人博客</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>Hexo</tag>
-        <tag>private</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用Hexo框架4步完成个人博客搭建Step.4</title>
-    <url>/posts/dd07.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，您输入的密码错误，请检查后重新输入。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="d9b72b322d089e68f36831ef55fd24a1bdb7107b5581e26451dcd3fd900f3982">4b38a63431ca6072ce4c12158ee71eedb96691b5ab322453cdce97522082e5e4512fa0dc33c5be995b6bee9f706dc37741e937599c4f78f8ace50ffc56cc83a9fb9c05efe083d9f563ca1ff4f3dbcab10f97a6c6904765faaaa81327b3d7c2005cac47294f0fb5ab7fafd82e3258cf3c00af8e1d4666e95e857600859e4b53bf066873ca081a5ecfe008a6d793ad83ff0ce4b7bceec0d9dc17d09a0bc0bcb68d</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">当前文章暂不对外可见，请输入密码后查看！</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>个人DIY日记</category>
-        <category>Hexo搭建个人博客</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>Hexo</tag>
-        <tag>private</tag>
       </tags>
   </entry>
 </search>
